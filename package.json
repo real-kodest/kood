@@ -1,0 +1,43 @@
+{
+    "name": "kood",
+    "displayName": "Kood Language",
+    "description": "Language support for Kood programming files",
+    "version": "0.0.1",
+    "publisher": "KMK-virtual",
+    "icon": "Logo.png",
+    "engines": { "vscode": "^1.0.0" },
+    "categories": ["Programming Languages"],
+    "contributes": {
+        "languages": [{
+            "id": "kood",
+            "aliases": ["Kood", "kd"],
+            "extensions": [".kd"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "kood",
+            "scopeName": "source.kd",
+            "path": "./kood.tmLanguage.json"
+        }],
+        "snippets": [{
+            "language": "kood",
+            "path": "./snippets.json"
+        }],
+        "commands": [
+        {
+            "command": "kood.runFile",
+            "title": "Run Kood File",
+            "icon": "$(play)"
+        }
+    ],
+    "menus": {
+        "editor/title": [
+            {
+                "command": "kood.runFile",
+                "group": "navigation",
+                "when": "resourceExtname == .kd"
+            }
+        ]
+    }
+    }
+}

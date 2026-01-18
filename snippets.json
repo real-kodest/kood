@@ -1,0 +1,86 @@
+{
+    "Comment": {
+        "prefix": "*",
+        "body": [
+            "* $0"
+        ],
+        "description": "add a comment"
+    },
+    "Add Line": {
+        "prefix": "addline:",
+        "body": [
+            "addline:$0"
+        ],
+        "description": "addline"
+    },
+    "item": {
+        "prefix": "item:",
+        "body": [
+            "item:$0=\"$1\""
+        ],
+        "description": "item"
+    },
+    "m item:": {
+        "prefix": "m_item:",
+        "body": [
+            "m_item:$0=$1 + $2"
+        ],
+        "description": "m_item"
+    },
+    "Get Line": {
+        "prefix": "getline:",
+        "body": [
+            "getline:$0=\"$1\""
+        ],
+        "description": "getline"
+    },
+    "timer": {
+        "prefix": "timer:",
+        "body": [
+            "timer:$0"
+        ],
+        "description": "timer"
+    },
+    "conv": {
+        "prefix": "conv:",
+        "body": [
+            "conv:$0:$1"
+        ],
+        "description": "conv"
+    },
+    "random": {
+        "prefix": "random:",
+        "body": [
+            "random:$0=$1, $2"
+        ],
+        "description": "random"
+    },
+    "make file": {
+        "prefix": "make_file:",
+        "body": [
+            "make_file:$0=\"$1\""
+        ],
+        "description": "make_file"
+    },
+    "read file": {
+        "prefix": "read_file:",
+        "body": [
+            "read_file:\"$0\""
+        ],
+        "description": "read_file"
+    },
+    "write_file": {
+        "prefix": "write_file:",
+        "body": [
+            "write_file:$0=\"$1\""
+        ],
+        "description": "write_file"
+    },
+    "if statement": {
+        "prefix": "if ",
+        "body": [
+            "if $0 ${1|=,>,<,ne} $2::$3"
+        ],
+        "description": "if statement"
+    }
+}

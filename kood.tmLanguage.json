@@ -1,0 +1,45 @@
+{
+    "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+    "name": "Kood",
+    "scopeName": "source.kd",
+    "patterns": [
+        { "include": "#comments" },
+        { "include": "#keywords" },
+        { "include": "#strings" },
+        { "include": "#numbers" }
+    ],
+    "repository": {
+        "comments": {
+            "patterns": [{
+                "name": "comment.line.asterisk.kood",
+                "match": "^\\s*\\*.*$"
+            }]
+        },
+        "keywords": {
+            "patterns": [
+                {
+                    "name": "keyword.control.kood",
+                    "match": "\\b(if|clear|timer|conv|random|make_file|read_file|write_file|addline|item|m_item|getline)(?=:)"
+                },
+                {
+                    "name": "keyword.operator.comparison.kood",
+                    "match": "\\b(=|ne|<|>)\\b"
+                }
+            ]
+        },
+        "strings": {
+            "name": "string.quoted.double.kood",
+            "begin": "\"",
+            "end": "\"",
+            "patterns": [
+                { "name": "constant.character.escape.kood", "match": "\\\\." }
+            ]
+        },
+        "numbers": {
+            "patterns": [{
+                "name": "constant.numeric.kood",
+                "match": "\\b\\d+(\\.\\d+)?\\b"
+            }]
+        }
+    }
+}
